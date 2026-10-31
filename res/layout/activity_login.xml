@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="@color/bg">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:gravity="center_horizontal"
+        android:padding="24dp">
+
+        <ImageView android:layout_width="72dp" android:layout_height="72dp"
+            android:layout_marginTop="40dp" android:src="@drawable/ic_bolt"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="18dp" android:text="ورود به ایکس گیم بوستر"
+            android:textColor="@color/text" android:textSize="20sp" android:textStyle="bold"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:text="برای فعال‌سازی موتورها وارد شو"
+            android:textColor="@color/text2" android:textSize="13sp"/>
+
+        <EditText android:id="@+id/etUser" android:layout_width="match_parent"
+            android:layout_height="52dp" android:layout_marginTop="28dp"
+            android:background="@drawable/bg_card" android:paddingStart="16dp" android:paddingEnd="16dp"
+            android:hint="نام کاربری (حداقل ۳ حرف)" android:inputType="text"
+            android:textColor="@color/text" android:textColorHint="@color/text2" android:textSize="14sp"/>
+
+        <Button android:id="@+id/btnLogin" android:layout_width="match_parent"
+            android:layout_height="50dp" android:layout_marginTop="16dp"
+            android:background="@drawable/bg_accent" android:text="ورود"
+            android:textColor="@color/btnText" android:textSize="15sp" android:textStyle="bold"/>
+
+        <Button android:id="@+id/btnGuest" android:layout_width="match_parent"
+            android:layout_height="50dp" android:layout_marginTop="10dp"
+            android:background="@drawable/bg_card" android:text="ورود به‌عنوان مهمان"
+            android:textColor="@color/accent" android:textSize="14sp" android:textStyle="bold"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="22dp" android:gravity="center"
+            android:text="حساب کاربری به‌صورت محلی روی همین دستگاه ذخیره می‌شود"
+            android:textColor="@color/text2" android:textSize="11sp"/>
+    </LinearLayout>
+</ScrollView>

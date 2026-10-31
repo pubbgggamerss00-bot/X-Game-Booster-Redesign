@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="56dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingStart="12dp" android:paddingEnd="12dp">
+        <ImageButton android:id="@+id/btnBack" android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_back" android:background="?android:attr/selectableItemBackgroundBorderless"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginStart="8dp" android:text="تنظیمات"
+            android:textColor="@color/text" android:textSize="17sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fillViewport="true" android:scrollbars="none">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingBottom="24dp">
+
+            <LinearLayout style="@style/Card">
+                <TextView style="@style/CardTitle" android:text="سرور DNS تونل پینگ"/>
+                <RadioGroup android:id="@+id/rgDns" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:orientation="vertical">
+                    <RadioButton android:id="@+id/rbAuto" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="خودکار — انتخاب سریع‌ترین" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbGoogle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Google — 8.8.8.8" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbCloudflare" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Cloudflare — 1.1.1.1" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbShecan" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="شکن — 178.22.122.100" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbShecan2" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="شکن ۲ — 185.51.200.2" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbRadar" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="رادار — 10.202.10.10" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbRadarGame" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="رادار گیم — 10.202.10.202" android:textColor="@color/text" android:textSize="13sp"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Card">
+                <TextView style="@style/CardTitle" android:text="رفتار بوستر"/>
+                <Switch android:id="@+id/swAuto" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:text="بوست خودکار قبل از اجرای بازی"
+                    android:textColor="@color/text" android:textSize="13sp"/>
+                <Switch android:id="@+id/swMic" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:text="ضبط صدا از میکروفون (در ضبط صفحه)"
+                    android:textColor="@color/text" android:textSize="13sp"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Card">
+                <TextView style="@style/CardTitle" android:text="استایل کراس‌هیر"/>
+                <RadioGroup android:id="@+id/rgStyle" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:orientation="horizontal">
+                    <RadioButton android:id="@+id/rbDot" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="نقطه" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbCross" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp" android:text="ضربدر" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbCircle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp" android:text="دایره" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbCombo" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp" android:text="ترکیبی" android:textColor="@color/text" android:textSize="13sp"/>
+                </RadioGroup>
+                <SeekBar android:id="@+id/sbSize" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:max="40"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="اندازه" android:textColor="@color/text2" android:textSize="11sp"/>
+                <RadioGroup android:id="@+id/rgColor" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:orientation="horizontal">
+                    <RadioButton android:id="@+id/rbGreen" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="سبز" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbRed" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp" android:text="قرمز" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbBlue" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp" android:text="آبی" android:textColor="@color/text" android:textSize="13sp"/>
+                    <RadioButton android:id="@+id/rbWhite" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp" android:text="سفید" android:textColor="@color/text" android:textSize="13sp"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout style="@style/Card">
+                <TextView android:id="@+id/tvAbout" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text2" android:textSize="12sp" android:lineSpacingExtra="3dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

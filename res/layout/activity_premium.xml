@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:background="@color/bg" android:scrollbars="none">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+
+        <ImageView android:layout_width="64dp" android:layout_height="64dp"
+            android:layout_gravity="center_horizontal" android:src="@drawable/ic_crown"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:gravity="center"
+            android:text="X پریمیوم" android:textColor="@color/gold"
+            android:textSize="22sp" android:textStyle="bold"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:gravity="center"
+            android:text="همه‌ی موتورها بدون محدودیت فعال می‌شوند"
+            android:textColor="@color/text2" android:textSize="13sp"/>
+
+        <LinearLayout style="@style/Card">
+            <TextView style="@style/CardTitle" android:text="امکانات پریمیوم"/>
+            <TextView style="@style/CardDesc" android:text="• تونل پینگ بدون محدودیت زمانی"/>
+            <TextView style="@style/CardDesc" android:text="• بوست پیشرفته رم + لیست سفید اپ‌ها"/>
+            <TextView style="@style/CardDesc" android:text="• کراس‌هیر و HUD با همه استایل‌ها"/>
+            <TextView style="@style/CardDesc" android:text="• ضبط صفحه با کیفیت بالا و صدای میکروفون"/>
+            <TextView style="@style/CardDesc" android:text="• حذف تبلیغات و اولویت موتورها"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/tvState" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:gravity="center"
+            android:text="وضعیت: نسخه رایگان" android:textColor="@color/text" android:textSize="14sp"/>
+
+        <RadioGroup android:id="@+id/rgPlan" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:orientation="vertical">
+            <RadioButton android:id="@+id/rbMonthly" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="یک‌ماهه" android:textColor="@color/text" android:textSize="14sp"/>
+            <RadioButton android:id="@+id/rbYearly" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="یک‌ساله (به‌صرفه‌تر)" android:textColor="@color/text" android:textSize="14sp"/>
+            <RadioButton android:id="@+id/rbLife" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="دائمی" android:textColor="@color/text" android:textSize="14sp"/>
+        </RadioGroup>
+
+        <Button android:id="@+id/btnActivate" android:layout_width="match_parent" android:layout_height="50dp"
+            android:layout_marginTop="16dp" android:background="@drawable/bg_accent"
+            android:text="فعال‌سازی" android:textColor="@color/btnText"
+            android:textSize="15sp" android:textStyle="bold"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:gravity="center"
+            android:text="در این نسخه بازطراحی‌شده، فعال‌سازی به‌صورت محلی انجام می‌شود و پرداختی انجام نمی‌شود"
+            android:textColor="@color/text2" android:textSize="11sp"/>
+    </LinearLayout>
+</ScrollView>
